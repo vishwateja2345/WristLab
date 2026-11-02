@@ -19,13 +19,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - uses: android-actions/setup-android@v3
-      - name: Install SDK packages
-        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
       - name: JVM tests
         run: python3 tools/test.py
       - name: Publication and permission checks
         run: python3 tools/check_publication.py
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+      - name: Install SDK packages
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
       - name: Build and verify APKs
         env:
           ANDROID_PLATFORM: android-36

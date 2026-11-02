@@ -1,10 +1,13 @@
 # Roadmap
 
+WristLab is an expanding community platform. Existing projects and ideas below are examples, not a closed scope. Independent apps, faces, tools and research can be proposed through [the project workflow](projects/README.md) without extending Gesture Lab.
+
 ## Available now
 
 - Manual Bluetooth NEXT/PREV controller with optional Samsung pinch and watch turn-and-return.
 - Ten editable native faces, source builds, experimental APK downloads and setup/undo documentation.
 - Public build checks and a device-report workflow.
+- Automatic project catalog discovery and starter generation for independent watch apps, phone apps, faces, tools and research.
 
 ## Good first contributions
 

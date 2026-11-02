@@ -6,18 +6,20 @@
 <a href="https://github.com/vishwateja2345/WristLab/releases"><img src="https://img.shields.io/badge/status-experimental-f4cc7c" alt="Experimental"></a>
 </p>
 
-**Custom watch faces. Bluetooth air controls. A practical Wear OS workshop.**
+**An open workshop for making more of your watch.**
 
-WristLab brings a Galaxy Watch7 project into one place: ten editable Watch Face Format designs, a watch controller, an Android phone companion, the experiments that did not make the cut, and the findings behind each decision.
+WristLab is a growing foundation for Wear OS projects: shared build tools, starter templates, setup guides, research and a place for independent community contributions. Build a watch app, a face, a phone companion, a desktop tool or an experiment of your own.
 
-The controller sends one completed swipe per command over paired Bluetooth. Tap NEXT, or optionally use Samsung's pinch recognition, to advance; a small turn away and return goes back. **Closing the watch controller ends the session on both devices.** There is no always-ready background mode.
+Our first examples are ten custom watch faces and a Bluetooth air controller with a phone companion. They are starting points, not the scope limit: **your project does not have to extend Gesture Lab or use its protocol.** [How the platform is organized →](docs/PLATFORM.md)
 
-This is an early community release, tested on one Galaxy Watch7 and OnePlus 15R pair. It is not a Samsung product or a universal gesture SDK. See [compatibility](docs/COMPATIBILITY.md) before installing.
+The current controller was tested on one Galaxy Watch7 and OnePlus 15R pair. WristLab is an early community baseline, not a Samsung product or a universal gesture SDK. Each project documents its own maturity and device support.
 
 ## Start here
 
 | You want | Go to |
 |---|---|
+| Create something new | [Community project steps](projects/README.md), [platform guide](docs/PLATFORM.md), [starter generator](tools/new_project.py) |
+| Explore the project catalog | `python3 tools/catalog.py list` · [metadata contract](docs/PROJECTS.md) |
 | Install the controller | [Release APKs](https://github.com/vishwateja2345/WristLab/releases/latest) → [setup](docs/SETUP.md) |
 | Pick or edit a watch face | [Face gallery](faces/README.md) |
 | Build everything yourself | [Build guide](docs/BUILD.md) |
@@ -25,7 +27,20 @@ This is an early community release, tested on one Galaxy Watch7 and OnePlus 15R 
 | Understand the research | [Findings](docs/RESEARCH.md), [battery](docs/BATTERY.md), [architecture](docs/ARCHITECTURE.md), [project history](docs/PROJECT_HISTORY.md) |
 | Add a device report or feature | [Contributing](CONTRIBUTING.md), [roadmap](ROADMAP.md), [issues](https://github.com/vishwateja2345/WristLab/issues) |
 
-## What you get
+## The foundation
+
+- **Independent projects:** add `projects/<id>/` with source, metadata and clear instructions. Discovery is automatic; no Gesture Lab dependency is required.
+- **Working starters:** generate a minimal watch app, phone app, licensed face starter, tool or research folder.
+- **Shared tooling:** SDK-only Android builds, catalog/permission/publication checks, CI, contribution templates and device reports.
+- **Room to grow:** new capabilities and hardware experiments can live separately, with their own permissions, setup and evidence.
+
+```sh
+python3 tools/new_project.py my-idea --name 'My Idea' --kind watch-app
+python3 tools/catalog.py check
+python3 tools/build.py project-my-idea
+```
+
+## First examples included
 
 | Component | Current state |
 |---|---|
@@ -35,6 +50,8 @@ This is an early community release, tested on one Galaxy Watch7 and OnePlus 15R 
 | **Battery-aware lifecycle** | No foreground-service notifications, boot receiver, wake lock or idle auto-start. Close the watch activity to stop both controllers. |
 | **Research notebook** | Why HID wheel scrolling failed for reels, why completed touch swipes worked, native pinch limits, AOD and battery lessons. |
 | **Experiments** | Paused comments/media/navigation work and a separate Watch Deck preview, clearly marked as unfinished. |
+
+The current controller sends one completed swipe per Bluetooth command. Tap NEXT, or optionally use Samsung pinch, to advance; turn away and return to go back. Closing the watch controller ends both sessions. Its manual battery policy applies to this controller; independent projects declare their own lifecycle.
 
 <table><tr>
 <td align="center"><img src="faces/instrument/preview.png" width="240" alt="Instrument Hybrid design render"></td>
@@ -65,6 +82,6 @@ python3 tools/build.py all
 
 Builds use the Android SDK directly and create a local development signing key in ignored `build/` unless you supply your own. No private signing keys are published. APK installation never happens as part of a build.
 
-Good first contributions: another device report, measured battery comparisons, accessible UI improvements, or an original face with documented asset rights. [Contribution guide →](CONTRIBUTING.md)
+Good first contributions: an independent idea, another device report, measured battery comparisons, accessible UI improvements, or an original face with documented asset rights. [Add your own project →](projects/README.md) · [Contribution guide →](CONTRIBUTING.md)
 
 Code and original dial artwork: [Apache 2.0](LICENSE). Fonts and photographs: [asset credits and terms](docs/ASSETS.md). Inspired by [CleanYourTV's community approach](https://github.com/Gathin23/cleanyourtv); independent of that project. Gesture prior art is credited in [NOTICE](NOTICE).

@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "gesture-lab-watch",
+      "name": "Gesture Lab",
+      "path": "apps/watch",
+      "kind": "watch-app",
+      "status": "device-tested",
+      "readme": "README.md",
+      "summary": "Manual Bluetooth NEXT/PREV controller; optional Samsung pinch.",
+      "license": "Apache-2.0",
+      "permissions": [
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.VIBRATE"
+      ],
+      "build_system": "android-sdk",
+      "build_target": "watch"
+    },
+    {
+      "id": "gesture-lab-link",
+      "name": "Gesture Lab Link",
+      "path": "apps/phone",
+      "kind": "phone-app",
+      "status": "device-tested",
+      "readme": "README.md",
+      "summary": "Temporary Accessibility swipe companion for the controller.",
+      "license": "Apache-2.0",
+      "permissions": [
+        "android.permission.BLUETOOTH_CONNECT"
+      ],
+      "build_system": "android-sdk",
+      "build_target": "phone"
+    },
+    {
+      "id": "watch-deck",
+      "name": "Watch Deck",
+      "path": "experiments/watch-deck",
+      "kind": "watch-app",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Separate foreground step/focus preview; not device tested.",
+      "license": "Apache-2.0",
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION",
+        "android.permission.VIBRATE"
+      ],
+      "build_system": "android-sdk",
+      "build_target": "deck"
+    },
+    {
+      "id": "face-meridian",
+      "name": "Meridian",
+      "path": "faces/meridian",
+      "kind": "watch-face",
+      "status": "device-tested",
+      "readme": "README.md",
+      "summary": "Installed; economy update installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "meridian"
+    },
+    {
+      "id": "face-instrument",
+      "name": "Instrument Hybrid",
+      "path": "faces/instrument",
+      "kind": "watch-face",
+      "status": "device-tested",
+      "readme": "README.md",
+      "summary": "Installed; economy update installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "instrument"
+    },
+    {
+      "id": "face-atelier",
+      "name": "Atelier Graphite",
+      "path": "faces/atelier",
+      "kind": "watch-face",
+      "status": "device-tested",
+      "readme": "README.md",
+      "summary": "Installed; interactive rendering checked",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "atelier"
+    },
+    {
+      "id": "face-terminal",
+      "name": "Terminal",
+      "path": "faces/terminal",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Build checked; device acceptance not recorded",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "terminal"
+    },
+    {
+      "id": "face-orbit",
+      "name": "Orbit",
+      "path": "faces/orbit",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Build checked; device acceptance not recorded",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "orbit"
+    },
+    {
+      "id": "face-alpine",
+      "name": "Alpine / Dusk",
+      "path": "faces/alpine",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Preview; not installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "alpine"
+    },
+    {
+      "id": "face-dolomites",
+      "name": "Dolomites",
+      "path": "faces/dolomites",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Preview; not installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "dolomites"
+    },
+    {
+      "id": "face-earth",
+      "name": "Blue Marble",
+      "path": "faces/earth",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Preview; not installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "earth"
+    },
+    {
+      "id": "face-milkyway",
+      "name": "Milky Way",
+      "path": "faces/milkyway",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Preview; not installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "milkyway"
+    },
+    {
+      "id": "face-tokyo",
+      "name": "Tokyo after dark",
+      "path": "faces/tokyo",
+      "kind": "watch-face",
+      "status": "build-tested",
+      "readme": "README.md",
+      "summary": "Preview; not installed",
+      "license": "Apache-2.0; retain documented font/media terms",
+      "permissions": [],
+      "build_system": "android-sdk",
+      "build_target": "tokyo"
+    }
+  ]
+}

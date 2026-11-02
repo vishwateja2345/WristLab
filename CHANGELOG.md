@@ -9,6 +9,7 @@ Initial public WristLab packaging of the existing personal project.
 - Ten editable WFF2 faces, with per-face historical device status and third-party asset credits.
 - Watch Deck 0.1-preview and archived expanded-control experiments kept separate from the controller build.
 - Portable SDK-only build tools, JVM regressions, permission/publication checks and GitHub Actions.
+- A growing-platform contribution baseline: independent project catalog, starter generator, shared Android build opt-in and contribution steps.
 - Research, compatibility, battery, privacy, setup/undo, assistant prompt and contribution documentation.
 
 Public APKs use a new development signing key. The original private signing key and personally installed APK signatures are not included. No devices are modified by this public packaging.

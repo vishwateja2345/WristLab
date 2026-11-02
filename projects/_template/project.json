@@ -1,0 +1,11 @@
+{
+  "id": "my-project",
+  "name": "My Project",
+  "summary": "Describe the concrete use case.",
+  "kind": "research",
+  "status": "draft",
+  "readme": "README.md",
+  "license": "Apache-2.0",
+  "permissions": [],
+  "build_system": "none"
+}

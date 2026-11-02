@@ -22,7 +22,10 @@ jobs:
       - name: JVM tests
         run: python3 tools/test.py
       - name: Publication and permission checks
-        run: python3 tools/check_publication.py
+        run: |
+          python3 tools/check_publication.py
+          python3 tools/catalog.py check
+          python3 tools/test_projects.py
       - uses: android-actions/setup-android@v3
         with:
           packages: platform-tools

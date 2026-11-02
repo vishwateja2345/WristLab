@@ -13,6 +13,8 @@ python3 tools/build.py all
 
 Targets: `watch`, `phone`, `faces`, `deck`, `all`, or a face name such as `instrument`. The `all` target includes the separately marked Watch Deck preview, but not the paused expanded-controls source.
 
+Independent community Android projects under `projects/<id>` can declare `build_system: android-sdk` and target `project-<id>`. They compile their own Java/resources and do not link Gesture Lab. `all` includes discovered Android community projects. Tool/research projects and external build systems keep their own documented process; catalog discovery never executes them. See [PLATFORM.md](PLATFORM.md).
+
 Outputs go to ignored `build/apks/`. Build tools are selected with `ANDROID_BUILD_TOOLS` (default `36.0.0`). Use `ANDROID_PLATFORM=android-36` to select an installed platform explicitly; otherwise the highest installed platform with an `android.jar` is used. JDK tools are read from `JAVA_HOME`, falling back to PATH.
 
 The build compiles the small Java apps directly, converts bytecode with d8, compiles resources with aapt2, aligns, signs and verifies APKs. Watch-face targets contain resources only. No build command pairs, installs, grants permission or changes device settings.

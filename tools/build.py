@@ -11,6 +11,7 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 import zipfile
+from catalog import load_projects, validate
 
 ROOT = Path(__file__).resolve().parents[1]
 ANDROID = '{http://schemas.android.com/apk/res/android}'
@@ -128,6 +129,11 @@ def main():
     targets = {'watch': ROOT / 'apps/watch', 'phone': ROOT / 'apps/phone',
                'deck': ROOT / 'experiments/watch-deck'}
     targets.update({f['id']: ROOT / f['path'] for f in faces})
+    projects = load_projects()
+    validate(projects)
+    for project in projects:
+        if project['origin'] == 'community' and project['build_system'] == 'android-sdk':
+            targets[project['build_target']] = ROOT / project['path']
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('target', choices=['all', 'faces', *targets])
     args = parser.parse_args()

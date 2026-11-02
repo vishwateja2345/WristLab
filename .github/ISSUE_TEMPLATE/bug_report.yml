@@ -1,0 +1,22 @@
+name: Bug report
+description: A controller, face or build problem
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened and what did you expect?
+      description: Include repeatable steps. Do not share private logs or identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Devices, software and release/commit
+      description: Model, Wear OS/Android versions, wearing wrist, app/view and native gesture setting. No serials or network addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: What have you checked?
+      description: Touch NEXT versus pinch, reverse gesture, connection and close-session behavior. Mark untested items.

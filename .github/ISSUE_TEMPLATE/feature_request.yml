@@ -1,0 +1,15 @@
+name: Feature or device report
+description: Propose a concrete use case or report compatibility
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Use case or device observations
+      description: For new ideas explain the action, target app, and how a session starts/stops. For reports use examples/DEVICE_REPORT.md. No private identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, tradeoffs and prior art
+      description: What was tested? Any permissions, background behavior or asset rights involved?

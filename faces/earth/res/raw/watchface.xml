@@ -1,0 +1,1913 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:00" />
+  <UserConfigurations>
+    <ListConfiguration id="edgeStyle" displayName="edge_label" screenReaderText="edge_label" defaultValue="steps">
+      <ListOption id="steps" displayName="steps" />
+      <ListOption id="split" displayName="split" />
+      <ListOption id="none" displayName="none" />
+    </ListConfiguration>
+    <ColorConfiguration id="edgeColor" displayName="edge_color_label" screenReaderText="edge_color_label" defaultValue="0">
+      <ColorOption id="0" displayName="ivory" colors="#F8EEDB" />
+      <ColorOption id="1" displayName="ice" colors="#BDDFFF" />
+      <ColorOption id="2" displayName="mint" colors="#BDE4CF" />
+      <ColorOption id="3" displayName="white" colors="#F7F7F4" />
+    </ColorConfiguration>
+    <ColorConfiguration id="clockColor" displayName="color_label" screenReaderText="color_label" defaultValue="0">
+      <ColorOption id="0" displayName="matched" colors="#F1F6FF" />
+      <ColorOption id="1" displayName="white" colors="#F7F7F4" />
+      <ColorOption id="2" displayName="ivory" colors="#F7E6C5" />
+      <ColorOption id="3" displayName="ink" colors="#242533" />
+      <ColorOption id="4" displayName="ice" colors="#CDEAFF" />
+    </ColorConfiguration>
+    <ListConfiguration id="clockSize" displayName="size_label" screenReaderText="size_label" defaultValue="large">
+      <ListOption id="large" displayName="large" />
+      <ListOption id="compact" displayName="compact" />
+    </ListConfiguration>
+    <ListConfiguration id="photoBrightness" displayName="brightness_label" screenReaderText="brightness_label" defaultValue="original">
+      <ListOption id="original" displayName="original" />
+      <ListOption id="dim" displayName="dim" />
+      <ListOption id="night" displayName="night" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group name="interactive" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <ListConfiguration id="photoBrightness">
+        <ListOption id="original">
+          <PartImage x="0" y="0" width="480" height="480" alpha="255">
+            <Image resource="background" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="dim">
+          <PartImage x="0" y="0" width="480" height="480" alpha="205">
+            <Image resource="background" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="night">
+          <PartImage x="0" y="0" width="480" height="480" alpha="155">
+            <Image resource="background" />
+          </PartImage>
+        </ListOption>
+      </ListConfiguration>
+      <ListConfiguration id="clockSize">
+        <ListOption id="large">
+          <DigitalClock x="40" y="59" width="400" height="110">
+            <TimeText x="0" y="0" width="400" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <Font family="outfit" size="90" color="[CONFIGURATION.clockColor.0]" />
+            </TimeText>
+          </DigitalClock>
+        </ListOption>
+        <ListOption id="compact">
+          <DigitalClock x="40" y="59" width="400" height="110">
+            <TimeText x="0" y="0" width="400" height="110" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <Font family="outfit" size="70" color="[CONFIGURATION.clockColor.0]" />
+            </TimeText>
+          </DigitalClock>
+        </ListOption>
+      </ListConfiguration>
+      <PartText x="75" y="43" width="330" height="25">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="17" color="[CONFIGURATION.clockColor.0]">
+            <Template>%s  %s %s  /  %s%%<Parameter expression="[DAY_OF_WEEK_S]" />
+              <Parameter expression="[DAY_Z]" />
+              <Parameter expression="[MONTH_S]" />
+              <Parameter expression="[BATTERY_PERCENT]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+      <ListConfiguration id="edgeStyle">
+        <ListOption id="steps">
+          <Group name="edge_steps" x="0" y="0" width="480" height="480">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="0.0" endAngle="4.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_0">[STEP_PERCENT] &gt;= 1.6666666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_0">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="0.0" endAngle="4.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="6.0" endAngle="10.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_1">[STEP_PERCENT] &gt;= 3.3333333333333335</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_1">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="6.0" endAngle="10.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="12.0" endAngle="16.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_2">[STEP_PERCENT] &gt;= 5.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_2">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="12.0" endAngle="16.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="18.0" endAngle="22.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_3">[STEP_PERCENT] &gt;= 6.666666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_3">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="18.0" endAngle="22.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="24.0" endAngle="28.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_4">[STEP_PERCENT] &gt;= 8.333333333333334</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_4">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="24.0" endAngle="28.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="30.0" endAngle="34.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_5">[STEP_PERCENT] &gt;= 10.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_5">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="30.0" endAngle="34.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="36.0" endAngle="40.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_6">[STEP_PERCENT] &gt;= 11.666666666666666</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_6">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="36.0" endAngle="40.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="42.0" endAngle="46.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_7">[STEP_PERCENT] &gt;= 13.333333333333334</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_7">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="42.0" endAngle="46.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="48.0" endAngle="52.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_8">[STEP_PERCENT] &gt;= 15.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_8">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="48.0" endAngle="52.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="54.0" endAngle="58.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_9">[STEP_PERCENT] &gt;= 16.666666666666668</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_9">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="54.0" endAngle="58.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="60.0" endAngle="64.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_10">[STEP_PERCENT] &gt;= 18.333333333333332</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_10">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="60.0" endAngle="64.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="66.0" endAngle="70.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_11">[STEP_PERCENT] &gt;= 20.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_11">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="66.0" endAngle="70.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="72.0" endAngle="76.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_12">[STEP_PERCENT] &gt;= 21.666666666666668</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_12">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="72.0" endAngle="76.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="78.0" endAngle="82.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_13">[STEP_PERCENT] &gt;= 23.333333333333332</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_13">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="78.0" endAngle="82.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="84.0" endAngle="88.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_14">[STEP_PERCENT] &gt;= 25.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_14">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="84.0" endAngle="88.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="90.0" endAngle="94.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_15">[STEP_PERCENT] &gt;= 26.666666666666668</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_15">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="90.0" endAngle="94.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="96.0" endAngle="100.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_16">[STEP_PERCENT] &gt;= 28.333333333333332</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_16">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="96.0" endAngle="100.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="102.0" endAngle="106.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_17">[STEP_PERCENT] &gt;= 30.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_17">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="102.0" endAngle="106.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="108.0" endAngle="112.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_18">[STEP_PERCENT] &gt;= 31.666666666666668</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_18">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="108.0" endAngle="112.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="114.0" endAngle="118.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_19">[STEP_PERCENT] &gt;= 33.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_19">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="114.0" endAngle="118.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="120.0" endAngle="124.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_20">[STEP_PERCENT] &gt;= 35.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_20">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="120.0" endAngle="124.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="126.0" endAngle="130.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_21">[STEP_PERCENT] &gt;= 36.666666666666664</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_21">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="126.0" endAngle="130.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="132.0" endAngle="136.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_22">[STEP_PERCENT] &gt;= 38.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_22">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="132.0" endAngle="136.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="138.0" endAngle="142.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_23">[STEP_PERCENT] &gt;= 40.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_23">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="138.0" endAngle="142.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="144.0" endAngle="148.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_24">[STEP_PERCENT] &gt;= 41.666666666666664</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_24">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="144.0" endAngle="148.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="150.0" endAngle="154.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_25">[STEP_PERCENT] &gt;= 43.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_25">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="150.0" endAngle="154.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="156.0" endAngle="160.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_26">[STEP_PERCENT] &gt;= 45.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_26">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="156.0" endAngle="160.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="162.0" endAngle="166.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_27">[STEP_PERCENT] &gt;= 46.666666666666664</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_27">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="162.0" endAngle="166.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="168.0" endAngle="172.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_28">[STEP_PERCENT] &gt;= 48.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_28">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="168.0" endAngle="172.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="174.0" endAngle="178.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_29">[STEP_PERCENT] &gt;= 50.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_29">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="174.0" endAngle="178.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="180.0" endAngle="184.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_30">[STEP_PERCENT] &gt;= 51.666666666666664</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_30">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="180.0" endAngle="184.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="186.0" endAngle="190.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_31">[STEP_PERCENT] &gt;= 53.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_31">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="186.0" endAngle="190.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="192.0" endAngle="196.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_32">[STEP_PERCENT] &gt;= 55.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_32">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="192.0" endAngle="196.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="198.0" endAngle="202.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_33">[STEP_PERCENT] &gt;= 56.666666666666664</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_33">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="198.0" endAngle="202.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="204.0" endAngle="208.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_34">[STEP_PERCENT] &gt;= 58.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_34">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="204.0" endAngle="208.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="210.0" endAngle="214.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_35">[STEP_PERCENT] &gt;= 60.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_35">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="210.0" endAngle="214.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="216.0" endAngle="220.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_36">[STEP_PERCENT] &gt;= 61.666666666666664</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_36">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="216.0" endAngle="220.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="222.0" endAngle="226.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_37">[STEP_PERCENT] &gt;= 63.333333333333336</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_37">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="222.0" endAngle="226.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="228.0" endAngle="232.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_38">[STEP_PERCENT] &gt;= 65.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_38">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="228.0" endAngle="232.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="234.0" endAngle="238.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_39">[STEP_PERCENT] &gt;= 66.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_39">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="234.0" endAngle="238.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="240.0" endAngle="244.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_40">[STEP_PERCENT] &gt;= 68.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_40">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="240.0" endAngle="244.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="246.0" endAngle="250.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_41">[STEP_PERCENT] &gt;= 70.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_41">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="246.0" endAngle="250.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="252.0" endAngle="256.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_42">[STEP_PERCENT] &gt;= 71.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_42">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="252.0" endAngle="256.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="258.0" endAngle="262.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_43">[STEP_PERCENT] &gt;= 73.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_43">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="258.0" endAngle="262.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="264.0" endAngle="268.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_44">[STEP_PERCENT] &gt;= 75.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_44">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="264.0" endAngle="268.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="270.0" endAngle="274.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_45">[STEP_PERCENT] &gt;= 76.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_45">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="270.0" endAngle="274.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="276.0" endAngle="280.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_46">[STEP_PERCENT] &gt;= 78.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_46">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="276.0" endAngle="280.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="282.0" endAngle="286.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_47">[STEP_PERCENT] &gt;= 80.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_47">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="282.0" endAngle="286.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="288.0" endAngle="292.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_48">[STEP_PERCENT] &gt;= 81.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_48">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="288.0" endAngle="292.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="294.0" endAngle="298.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_49">[STEP_PERCENT] &gt;= 83.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_49">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="294.0" endAngle="298.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="300.0" endAngle="304.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_50">[STEP_PERCENT] &gt;= 85.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_50">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="300.0" endAngle="304.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="306.0" endAngle="310.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_51">[STEP_PERCENT] &gt;= 86.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_51">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="306.0" endAngle="310.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="312.0" endAngle="316.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_52">[STEP_PERCENT] &gt;= 88.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_52">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="312.0" endAngle="316.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="318.0" endAngle="322.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_53">[STEP_PERCENT] &gt;= 90.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_53">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="318.0" endAngle="322.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="324.0" endAngle="328.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_54">[STEP_PERCENT] &gt;= 91.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_54">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="324.0" endAngle="328.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="330.0" endAngle="334.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_55">[STEP_PERCENT] &gt;= 93.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_55">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="330.0" endAngle="334.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="336.0" endAngle="340.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_56">[STEP_PERCENT] &gt;= 95.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_56">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="336.0" endAngle="340.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="342.0" endAngle="346.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_57">[STEP_PERCENT] &gt;= 96.66666666666667</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_57">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="342.0" endAngle="346.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="348.0" endAngle="352.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_58">[STEP_PERCENT] &gt;= 98.33333333333333</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_58">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="348.0" endAngle="352.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="354.0" endAngle="358.38" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_59">[STEP_PERCENT] &gt;= 100.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_59">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="354.0" endAngle="358.38" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+          </Group>
+        </ListOption>
+        <ListOption id="split">
+          <Group name="edge_split" x="0" y="0" width="480" height="480">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="215.0" endAngle="218.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_0">[STEP_PERCENT] &gt;= 4.545454545454546</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_0">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="215.0" endAngle="218.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="220.0" endAngle="223.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_1">[STEP_PERCENT] &gt;= 9.090909090909092</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_1">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="220.0" endAngle="223.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="225.0" endAngle="228.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_2">[STEP_PERCENT] &gt;= 13.636363636363637</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_2">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="225.0" endAngle="228.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="230.0" endAngle="233.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_3">[STEP_PERCENT] &gt;= 18.181818181818183</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_3">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="230.0" endAngle="233.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="235.0" endAngle="238.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_4">[STEP_PERCENT] &gt;= 22.727272727272727</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_4">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="235.0" endAngle="238.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="240.0" endAngle="243.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_5">[STEP_PERCENT] &gt;= 27.272727272727273</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_5">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="240.0" endAngle="243.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="245.0" endAngle="248.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_6">[STEP_PERCENT] &gt;= 31.818181818181817</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_6">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="245.0" endAngle="248.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="250.0" endAngle="253.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_7">[STEP_PERCENT] &gt;= 36.36363636363637</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_7">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="250.0" endAngle="253.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="255.0" endAngle="258.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_8">[STEP_PERCENT] &gt;= 40.90909090909091</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_8">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="255.0" endAngle="258.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="260.0" endAngle="263.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_9">[STEP_PERCENT] &gt;= 45.45454545454545</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_9">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="260.0" endAngle="263.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="265.0" endAngle="268.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_10">[STEP_PERCENT] &gt;= 50.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_10">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="265.0" endAngle="268.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="270.0" endAngle="273.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_11">[STEP_PERCENT] &gt;= 54.54545454545455</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_11">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="270.0" endAngle="273.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="275.0" endAngle="278.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_12">[STEP_PERCENT] &gt;= 59.09090909090909</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_12">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="275.0" endAngle="278.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="280.0" endAngle="283.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_13">[STEP_PERCENT] &gt;= 63.63636363636363</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_13">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="280.0" endAngle="283.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="285.0" endAngle="288.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_14">[STEP_PERCENT] &gt;= 68.18181818181819</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_14">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="285.0" endAngle="288.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="290.0" endAngle="293.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_15">[STEP_PERCENT] &gt;= 72.72727272727273</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_15">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="290.0" endAngle="293.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="295.0" endAngle="298.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_16">[STEP_PERCENT] &gt;= 77.27272727272727</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_16">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="295.0" endAngle="298.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="300.0" endAngle="303.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_17">[STEP_PERCENT] &gt;= 81.81818181818181</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_17">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="300.0" endAngle="303.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="305.0" endAngle="308.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_18">[STEP_PERCENT] &gt;= 86.36363636363636</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_18">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="305.0" endAngle="308.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="310.0" endAngle="313.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_19">[STEP_PERCENT] &gt;= 90.9090909090909</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_19">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="310.0" endAngle="313.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="315.0" endAngle="318.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_20">[STEP_PERCENT] &gt;= 95.45454545454545</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_20">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="315.0" endAngle="318.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="320.0" endAngle="323.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_step_percent_21">[STEP_PERCENT] &gt;= 100.0</Expression>
+              </Expressions>
+              <Compare expression="progress_step_percent_21">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="320.0" endAngle="323.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="35.0" endAngle="38.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_0">[BATTERY_PERCENT] &gt;= 4.545454545454546</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_0">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="35.0" endAngle="38.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="40.0" endAngle="43.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_1">[BATTERY_PERCENT] &gt;= 9.090909090909092</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_1">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="40.0" endAngle="43.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="45.0" endAngle="48.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_2">[BATTERY_PERCENT] &gt;= 13.636363636363637</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_2">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="45.0" endAngle="48.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="50.0" endAngle="53.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_3">[BATTERY_PERCENT] &gt;= 18.181818181818183</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_3">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="50.0" endAngle="53.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="55.0" endAngle="58.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_4">[BATTERY_PERCENT] &gt;= 22.727272727272727</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_4">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="55.0" endAngle="58.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="60.0" endAngle="63.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_5">[BATTERY_PERCENT] &gt;= 27.272727272727273</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_5">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="60.0" endAngle="63.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="65.0" endAngle="68.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_6">[BATTERY_PERCENT] &gt;= 31.818181818181817</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_6">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="65.0" endAngle="68.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="70.0" endAngle="73.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_7">[BATTERY_PERCENT] &gt;= 36.36363636363637</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_7">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="70.0" endAngle="73.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="75.0" endAngle="78.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_8">[BATTERY_PERCENT] &gt;= 40.90909090909091</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_8">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="75.0" endAngle="78.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="80.0" endAngle="83.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_9">[BATTERY_PERCENT] &gt;= 45.45454545454545</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_9">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="80.0" endAngle="83.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="85.0" endAngle="88.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_10">[BATTERY_PERCENT] &gt;= 50.0</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_10">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="85.0" endAngle="88.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="90.0" endAngle="93.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_11">[BATTERY_PERCENT] &gt;= 54.54545454545455</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_11">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="90.0" endAngle="93.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="95.0" endAngle="98.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_12">[BATTERY_PERCENT] &gt;= 59.09090909090909</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_12">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="95.0" endAngle="98.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="100.0" endAngle="103.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_13">[BATTERY_PERCENT] &gt;= 63.63636363636363</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_13">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="100.0" endAngle="103.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="105.0" endAngle="108.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_14">[BATTERY_PERCENT] &gt;= 68.18181818181819</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_14">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="105.0" endAngle="108.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="110.0" endAngle="113.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_15">[BATTERY_PERCENT] &gt;= 72.72727272727273</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_15">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="110.0" endAngle="113.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="115.0" endAngle="118.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_16">[BATTERY_PERCENT] &gt;= 77.27272727272727</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_16">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="115.0" endAngle="118.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="120.0" endAngle="123.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_17">[BATTERY_PERCENT] &gt;= 81.81818181818181</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_17">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="120.0" endAngle="123.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="125.0" endAngle="128.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_18">[BATTERY_PERCENT] &gt;= 86.36363636363636</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_18">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="125.0" endAngle="128.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="130.0" endAngle="133.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_19">[BATTERY_PERCENT] &gt;= 90.9090909090909</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_19">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="130.0" endAngle="133.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="135.0" endAngle="138.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_20">[BATTERY_PERCENT] &gt;= 95.45454545454545</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_20">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="135.0" endAngle="138.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Arc centerX="240" centerY="240" width="462" height="462" startAngle="140.0" endAngle="143.65" direction="CLOCKWISE">
+                <Stroke color="#60878A91" thickness="3" cap="ROUND" />
+              </Arc>
+            </PartDraw>
+            <Condition>
+              <Expressions>
+                <Expression name="progress_battery_percent_21">[BATTERY_PERCENT] &gt;= 100.0</Expression>
+              </Expressions>
+              <Compare expression="progress_battery_percent_21">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Arc centerX="240" centerY="240" width="462" height="462" startAngle="140.0" endAngle="143.65" direction="CLOCKWISE">
+                    <Stroke color="[CONFIGURATION.edgeColor.0]" thickness="3.5" cap="ROUND" />
+                  </Arc>
+                </PartDraw>
+              </Compare>
+            </Condition>
+          </Group>
+        </ListOption>
+        <ListOption id="none">
+          <Group name="edge_none" x="0" y="0" width="480" height="480" />
+        </ListOption>
+      </ListConfiguration>
+    </Group>
+    <ComplicationSlot x="125" y="398" width="230" height="55" slotId="1" displayName="comp_bottom" supportedTypes="SHORT_TEXT EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="230" height="55" cornerRadius="16" outlinePadding="2" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="230" height="34">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="outfit" size="29" color="#F5F4F0">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="33" width="230" height="20">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="outfit" size="12" color="#F5F4F0">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <Group name="ambient" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="60" y="194" width="360" height="80">
+        <TimeText x="0" y="0" width="360" height="80" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+          <Font family="outfit" size="60" color="#C3C6CA" />
+        </TimeText>
+      </DigitalClock>
+      <PartText x="90" y="276" width="300" height="26">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="17" color="#8B8E92">
+            <Template>%s  %s %s<Parameter expression="[DAY_OF_WEEK_S]" />
+              <Parameter expression="[DAY_Z]" />
+              <Parameter expression="[MONTH_S]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+      <PartText x="90" y="315" width="300" height="28">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="20" color="#8B8E92">
+            <Template>%s steps<Parameter expression="[STEP_COUNT]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+    </Group>
+  </Scene>
+</WatchFace>

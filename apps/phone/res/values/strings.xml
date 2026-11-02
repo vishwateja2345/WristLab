@@ -1,0 +1,1 @@
+<resources><string name="swipe_description">Temporary watch-control session. Performs one swipe per command from your selected watch. Does not read screen content. Turns off when the watch controller closes or the setup session expires.</string></resources>

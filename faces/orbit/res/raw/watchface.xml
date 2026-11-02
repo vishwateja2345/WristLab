@@ -1,0 +1,1256 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="accent" displayName="color_label" screenReaderText="color_label" defaultValue="0">
+      <ColorOption id="0" displayName="lime" colors="#C7FF5E" />
+      <ColorOption id="1" displayName="ice" colors="#91D9FF" />
+      <ColorOption id="2" displayName="orange" colors="#FFA36A" />
+      <ColorOption id="3" displayName="violet" colors="#C7ABFF" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="240.0" startY="26.0" endX="240.0" endY="15.0">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="263.1" startY="20.21" endX="263.52" endY="16.23">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="285.95" startY="23.83" endX="286.78" endY="19.92">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="308.29" startY="29.82" endX="309.53" endY="26.01">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="329.89" startY="38.11" endX="331.52" endY="34.45">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="347.0" startY="54.67" endX="352.5" endY="45.14">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="369.9" startY="61.21" endX="372.25" endY="57.97">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="387.88" startY="75.76" endX="390.55" endY="72.79">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="404.24" startY="92.12" endX="407.21" endY="89.45">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="418.79" startY="110.1" endX="422.03" endY="107.75">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="425.33" startY="133.0" endX="434.86" endY="127.5">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="441.89" startY="150.11" endX="445.55" endY="148.48">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="450.18" startY="171.71" endX="453.99" endY="170.47">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="456.17" startY="194.05" endX="460.08" endY="193.22">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="459.79" startY="216.9" endX="463.77" endY="216.48">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="454.0" startY="240.0" endX="465.0" endY="240.0">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="459.79" startY="263.1" endX="463.77" endY="263.52">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="456.17" startY="285.95" endX="460.08" endY="286.78">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="450.18" startY="308.29" endX="453.99" endY="309.53">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="441.89" startY="329.89" endX="445.55" endY="331.52">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="425.33" startY="347.0" endX="434.86" endY="352.5">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="418.79" startY="369.9" endX="422.03" endY="372.25">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="404.24" startY="387.88" endX="407.21" endY="390.55">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="387.88" startY="404.24" endX="390.55" endY="407.21">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="369.9" startY="418.79" endX="372.25" endY="422.03">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="347.0" startY="425.33" endX="352.5" endY="434.86">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="329.89" startY="441.89" endX="331.52" endY="445.55">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="308.29" startY="450.18" endX="309.53" endY="453.99">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="285.95" startY="456.17" endX="286.78" endY="460.08">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="263.1" startY="459.79" endX="263.52" endY="463.77">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="240.0" startY="454.0" endX="240.0" endY="465.0">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="216.9" startY="459.79" endX="216.48" endY="463.77">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="194.05" startY="456.17" endX="193.22" endY="460.08">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="171.71" startY="450.18" endX="170.47" endY="453.99">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="150.11" startY="441.89" endX="148.48" endY="445.55">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="133.0" startY="425.33" endX="127.5" endY="434.86">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="110.1" startY="418.79" endX="107.75" endY="422.03">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="92.12" startY="404.24" endX="89.45" endY="407.21">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="75.76" startY="387.88" endX="72.79" endY="390.55">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="61.21" startY="369.9" endX="57.97" endY="372.25">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="54.67" startY="347.0" endX="45.14" endY="352.5">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="38.11" startY="329.89" endX="34.45" endY="331.52">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="29.82" startY="308.29" endX="26.01" endY="309.53">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="23.83" startY="285.95" endX="19.92" endY="286.78">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="20.21" startY="263.1" endX="16.23" endY="263.52">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="26.0" startY="240.0" endX="15.0" endY="240.0">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="20.21" startY="216.9" endX="16.23" endY="216.48">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="23.83" startY="194.05" endX="19.92" endY="193.22">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="29.82" startY="171.71" endX="26.01" endY="170.47">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="38.11" startY="150.11" endX="34.45" endY="148.48">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="54.67" startY="133.0" endX="45.14" endY="127.5">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="61.21" startY="110.1" endX="57.97" endY="107.75">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="75.76" startY="92.12" endX="72.79" endY="89.45">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="92.12" startY="75.76" endX="89.45" endY="72.79">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="110.1" startY="61.21" endX="107.75" endY="57.97">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="133.0" startY="54.67" endX="127.5" endY="45.14">
+        <Stroke color="#6E7970" thickness="2" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="150.11" startY="38.11" endX="148.48" endY="34.45">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="171.71" startY="29.82" endX="170.47" endY="26.01">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="194.05" startY="23.83" endX="193.22" endY="19.92">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="216.9" startY="20.21" endX="216.48" endY="16.23">
+        <Stroke color="#2F3932" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="221.0" endAngle="224.1" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_63">[BATTERY_PERCENT] &gt;= 5</Expression>
+      </Expressions>
+      <Compare expression="meter_63">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="221.0" endAngle="224.1" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="41.0" endAngle="44.1" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_65">[STEP_COUNT] &gt;= 500</Expression>
+      </Expressions>
+      <Compare expression="meter_65">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="41.0" endAngle="44.1" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="225.9" endAngle="229.0" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_67">[BATTERY_PERCENT] &gt;= 10</Expression>
+      </Expressions>
+      <Compare expression="meter_67">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="225.9" endAngle="229.0" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="45.9" endAngle="49.0" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_69">[STEP_COUNT] &gt;= 1000</Expression>
+      </Expressions>
+      <Compare expression="meter_69">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="45.9" endAngle="49.0" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="230.8" endAngle="233.9" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_71">[BATTERY_PERCENT] &gt;= 15</Expression>
+      </Expressions>
+      <Compare expression="meter_71">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="230.8" endAngle="233.9" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="50.8" endAngle="53.9" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_73">[STEP_COUNT] &gt;= 1500</Expression>
+      </Expressions>
+      <Compare expression="meter_73">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="50.8" endAngle="53.9" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="235.7" endAngle="238.79999999999998" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_75">[BATTERY_PERCENT] &gt;= 20</Expression>
+      </Expressions>
+      <Compare expression="meter_75">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="235.7" endAngle="238.79999999999998" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="55.7" endAngle="58.800000000000004" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_77">[STEP_COUNT] &gt;= 2000</Expression>
+      </Expressions>
+      <Compare expression="meter_77">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="55.7" endAngle="58.800000000000004" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="240.6" endAngle="243.7" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_79">[BATTERY_PERCENT] &gt;= 25</Expression>
+      </Expressions>
+      <Compare expression="meter_79">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="240.6" endAngle="243.7" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="60.6" endAngle="63.7" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_81">[STEP_COUNT] &gt;= 2500</Expression>
+      </Expressions>
+      <Compare expression="meter_81">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="60.6" endAngle="63.7" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="245.5" endAngle="248.6" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_83">[BATTERY_PERCENT] &gt;= 30</Expression>
+      </Expressions>
+      <Compare expression="meter_83">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="245.5" endAngle="248.6" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="65.5" endAngle="68.6" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_85">[STEP_COUNT] &gt;= 3000</Expression>
+      </Expressions>
+      <Compare expression="meter_85">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="65.5" endAngle="68.6" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="250.4" endAngle="253.5" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_87">[BATTERY_PERCENT] &gt;= 35</Expression>
+      </Expressions>
+      <Compare expression="meter_87">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="250.4" endAngle="253.5" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="70.4" endAngle="73.5" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_89">[STEP_COUNT] &gt;= 3500</Expression>
+      </Expressions>
+      <Compare expression="meter_89">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="70.4" endAngle="73.5" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="255.3" endAngle="258.40000000000003" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_91">[BATTERY_PERCENT] &gt;= 40</Expression>
+      </Expressions>
+      <Compare expression="meter_91">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="255.3" endAngle="258.40000000000003" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="75.30000000000001" endAngle="78.4" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_93">[STEP_COUNT] &gt;= 4000</Expression>
+      </Expressions>
+      <Compare expression="meter_93">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="75.30000000000001" endAngle="78.4" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="260.2" endAngle="263.3" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_95">[BATTERY_PERCENT] &gt;= 45</Expression>
+      </Expressions>
+      <Compare expression="meter_95">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="260.2" endAngle="263.3" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="80.2" endAngle="83.3" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_97">[STEP_COUNT] &gt;= 4500</Expression>
+      </Expressions>
+      <Compare expression="meter_97">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="80.2" endAngle="83.3" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="265.1" endAngle="268.20000000000005" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_99">[BATTERY_PERCENT] &gt;= 50</Expression>
+      </Expressions>
+      <Compare expression="meter_99">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="265.1" endAngle="268.20000000000005" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="85.1" endAngle="88.19999999999999" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_101">[STEP_COUNT] &gt;= 5000</Expression>
+      </Expressions>
+      <Compare expression="meter_101">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="85.1" endAngle="88.19999999999999" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="270.0" endAngle="273.1" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_103">[BATTERY_PERCENT] &gt;= 55</Expression>
+      </Expressions>
+      <Compare expression="meter_103">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="270.0" endAngle="273.1" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="90.0" endAngle="93.1" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_105">[STEP_COUNT] &gt;= 5500</Expression>
+      </Expressions>
+      <Compare expression="meter_105">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="90.0" endAngle="93.1" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="274.9" endAngle="278.0" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_107">[BATTERY_PERCENT] &gt;= 60</Expression>
+      </Expressions>
+      <Compare expression="meter_107">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="274.9" endAngle="278.0" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="94.9" endAngle="98.0" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_109">[STEP_COUNT] &gt;= 6000</Expression>
+      </Expressions>
+      <Compare expression="meter_109">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="94.9" endAngle="98.0" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="279.8" endAngle="282.90000000000003" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_111">[BATTERY_PERCENT] &gt;= 65</Expression>
+      </Expressions>
+      <Compare expression="meter_111">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="279.8" endAngle="282.90000000000003" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="99.80000000000001" endAngle="102.9" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_113">[STEP_COUNT] &gt;= 6500</Expression>
+      </Expressions>
+      <Compare expression="meter_113">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="99.80000000000001" endAngle="102.9" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="284.7" endAngle="287.8" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_115">[BATTERY_PERCENT] &gt;= 70</Expression>
+      </Expressions>
+      <Compare expression="meter_115">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="284.7" endAngle="287.8" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="104.7" endAngle="107.8" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_117">[STEP_COUNT] &gt;= 7000</Expression>
+      </Expressions>
+      <Compare expression="meter_117">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="104.7" endAngle="107.8" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="289.6" endAngle="292.70000000000005" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_119">[BATTERY_PERCENT] &gt;= 75</Expression>
+      </Expressions>
+      <Compare expression="meter_119">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="289.6" endAngle="292.70000000000005" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="109.60000000000001" endAngle="112.7" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_121">[STEP_COUNT] &gt;= 7500</Expression>
+      </Expressions>
+      <Compare expression="meter_121">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="109.60000000000001" endAngle="112.7" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="294.5" endAngle="297.6" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_123">[BATTERY_PERCENT] &gt;= 80</Expression>
+      </Expressions>
+      <Compare expression="meter_123">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="294.5" endAngle="297.6" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="114.5" endAngle="117.6" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_125">[STEP_COUNT] &gt;= 8000</Expression>
+      </Expressions>
+      <Compare expression="meter_125">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="114.5" endAngle="117.6" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="299.4" endAngle="302.5" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_127">[BATTERY_PERCENT] &gt;= 85</Expression>
+      </Expressions>
+      <Compare expression="meter_127">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="299.4" endAngle="302.5" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="119.4" endAngle="122.5" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_129">[STEP_COUNT] &gt;= 8500</Expression>
+      </Expressions>
+      <Compare expression="meter_129">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="119.4" endAngle="122.5" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="304.3" endAngle="307.40000000000003" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_131">[BATTERY_PERCENT] &gt;= 90</Expression>
+      </Expressions>
+      <Compare expression="meter_131">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="304.3" endAngle="307.40000000000003" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="124.30000000000001" endAngle="127.4" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_133">[STEP_COUNT] &gt;= 9000</Expression>
+      </Expressions>
+      <Compare expression="meter_133">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="124.30000000000001" endAngle="127.4" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="309.2" endAngle="312.3" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_135">[BATTERY_PERCENT] &gt;= 95</Expression>
+      </Expressions>
+      <Compare expression="meter_135">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="309.2" endAngle="312.3" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="129.2" endAngle="132.29999999999998" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_137">[STEP_COUNT] &gt;= 9500</Expression>
+      </Expressions>
+      <Compare expression="meter_137">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="129.2" endAngle="132.29999999999998" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="314.1" endAngle="317.20000000000005" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_139">[BATTERY_PERCENT] &gt;= 100</Expression>
+      </Expressions>
+      <Compare expression="meter_139">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="314.1" endAngle="317.20000000000005" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Arc centerX="240" centerY="240" width="404" height="404" startAngle="134.10000000000002" endAngle="137.20000000000002" direction="CLOCKWISE">
+        <Stroke color="#1C2420" thickness="7" cap="ROUND" />
+      </Arc>
+    </PartDraw>
+    <Condition>
+      <Expressions>
+        <Expression name="meter_141">[STEP_COUNT] &gt;= 10000</Expression>
+      </Expressions>
+      <Compare expression="meter_141">
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <Arc centerX="240" centerY="240" width="404" height="404" startAngle="134.10000000000002" endAngle="137.20000000000002" direction="CLOCKWISE">
+            <Stroke color="[CONFIGURATION.accent.0]" thickness="7" cap="ROUND" />
+          </Arc>
+        </PartDraw>
+      </Compare>
+    </Condition>
+    <PartText x="100" y="62" width="280" height="30">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="20" color="[CONFIGURATION.accent.0]">O R B I T</Font>
+      </Text>
+    </PartText>
+    <PartText x="90" y="105" width="300" height="34">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="23" color="#78827D">
+          <Template>%s  /  %s %s<Parameter expression="[DAY_OF_WEEK_S]" />
+            <Parameter expression="[DAY_Z]" />
+            <Parameter expression="[MONTH_S]" />
+          </Template>
+        </Font>
+      </Text>
+    </PartText>
+    <DigitalClock x="65" y="153" width="350" height="127">
+      <TimeText x="0" y="0" width="350" height="127" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER" alpha="255">
+        <Variant mode="AMBIENT" target="alpha" value="0" />
+        <Font family="rajdhani" size="119" color="#F4F5F3" />
+      </TimeText>
+      <TimeText x="0" y="0" width="350" height="127" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER" alpha="0">
+        <Variant mode="AMBIENT" target="alpha" value="255" />
+        <Font family="rajdhani" size="103.53" color="#C8CCCA" />
+      </TimeText>
+    </DigitalClock>
+    <PartText x="155" y="279" width="170" height="26">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="16" color="#78827D">LOCAL TIME</Font>
+      </Text>
+    </PartText>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="114" startY="323" endX="366" endY="323">
+        <Stroke color="#1C2420" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <ComplicationSlot x="102" y="339" width="128" height="67" slotId="1" displayName="comp_left" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="128" height="67" cornerRadius="12" outlinePadding="2" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="128" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="23" width="128" height="44">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="128" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="23" width="128" height="44">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot x="250" y="339" width="128" height="67" slotId="2" displayName="comp_right" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="128" height="67" cornerRadius="12" outlinePadding="2" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="128" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="23" width="128" height="44">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="128" height="28">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="23" width="128" height="44">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

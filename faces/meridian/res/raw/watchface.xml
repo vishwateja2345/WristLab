@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="accent" displayName="color_label" screenReaderText="color_label" defaultValue="0">
+      <ColorOption id="0" displayName="lime" colors="#D8C396" />
+      <ColorOption id="1" displayName="ice" colors="#91D9FF" />
+      <ColorOption id="2" displayName="orange" colors="#FFA36A" />
+      <ColorOption id="3" displayName="violet" colors="#C7ABFF" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="secondsOptIn" displayName="seconds_label" screenReaderText="seconds_label" defaultValue="FALSE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="240.0" startY="43.0" endX="240.0" endY="21.0">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="261.64" startY="34.13" endX="262.89" endY="22.2">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="283.04" startY="37.52" endX="285.53" endY="25.79">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="303.97" startY="43.13" endX="307.67" endY="31.72">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="324.19" startY="50.9" endX="329.08" endY="39.93">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="338.5" startY="69.39" endX="349.5" endY="50.34">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="361.67" startY="72.53" endX="368.72" endY="62.83">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="378.51" startY="86.17" endX="386.54" endY="77.25">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="393.83" startY="101.49" endX="402.75" endY="93.46">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="407.47" startY="118.33" endX="417.17" endY="111.28">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="410.61" startY="141.5" endX="429.66" endY="130.5">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="429.1" startY="155.81" endX="440.07" endY="150.92">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="436.87" startY="176.03" endX="448.28" endY="172.33">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="442.48" startY="196.96" endX="454.21" endY="194.47">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="445.87" startY="218.36" endX="457.8" endY="217.11">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="437.0" startY="240.0" endX="459.0" endY="240.0">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="445.87" startY="261.64" endX="457.8" endY="262.89">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="442.48" startY="283.04" endX="454.21" endY="285.53">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="436.87" startY="303.97" endX="448.28" endY="307.67">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="429.1" startY="324.19" endX="440.07" endY="329.08">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="410.61" startY="338.5" endX="429.66" endY="349.5">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="407.47" startY="361.67" endX="417.17" endY="368.72">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="393.83" startY="378.51" endX="402.75" endY="386.54">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="378.51" startY="393.83" endX="386.54" endY="402.75">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="361.67" startY="407.47" endX="368.72" endY="417.17">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="338.5" startY="410.61" endX="349.5" endY="429.66">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="324.19" startY="429.1" endX="329.08" endY="440.07">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="303.97" startY="436.87" endX="307.67" endY="448.28">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="283.04" startY="442.48" endX="285.53" endY="454.21">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="261.64" startY="445.87" endX="262.89" endY="457.8">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="240.0" startY="437.0" endX="240.0" endY="459.0">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="218.36" startY="445.87" endX="217.11" endY="457.8">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="196.96" startY="442.48" endX="194.47" endY="454.21">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="176.03" startY="436.87" endX="172.33" endY="448.28">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="155.81" startY="429.1" endX="150.92" endY="440.07">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="141.5" startY="410.61" endX="130.5" endY="429.66">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="118.33" startY="407.47" endX="111.28" endY="417.17">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="101.49" startY="393.83" endX="93.46" endY="402.75">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="86.17" startY="378.51" endX="77.25" endY="386.54">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="72.53" startY="361.67" endX="62.83" endY="368.72">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="69.39" startY="338.5" endX="50.34" endY="349.5">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="50.9" startY="324.19" endX="39.93" endY="329.08">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="43.13" startY="303.97" endX="31.72" endY="307.67">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="37.52" startY="283.04" endX="25.79" endY="285.53">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="34.13" startY="261.64" endX="22.2" endY="262.89">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="43.0" startY="240.0" endX="21.0" endY="240.0">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="34.13" startY="218.36" endX="22.2" endY="217.11">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="37.52" startY="196.96" endX="25.79" endY="194.47">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="43.13" startY="176.03" endX="31.72" endY="172.33">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="50.9" startY="155.81" endX="39.93" endY="150.92">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="69.39" startY="141.5" endX="50.34" endY="130.5">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="72.53" startY="118.33" endX="62.83" endY="111.28">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="86.17" startY="101.49" endX="77.25" endY="93.46">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="101.49" startY="86.17" endX="93.46" endY="77.25">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="118.33" startY="72.53" endX="111.28" endY="62.83">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Line startX="141.5" startY="69.39" endX="130.5" endY="50.34">
+        <Stroke color="#F4F5F3" thickness="3" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="155.81" startY="50.9" endX="150.92" endY="39.93">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="176.03" startY="43.13" endX="172.33" endY="31.72">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="196.96" startY="37.52" endX="194.47" endY="25.79">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="218.36" startY="34.13" endX="217.11" endY="22.2">
+        <Stroke color="#78827D" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartText x="215" y="43" width="50" height="46">
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="35" color="#F4F5F3">12</Font>
+      </Text>
+    </PartText>
+    <PartText x="389" y="217" width="50" height="46">
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="35" color="#F4F5F3">3</Font>
+      </Text>
+    </PartText>
+    <PartText x="215" y="391" width="50" height="46">
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="35" color="#F4F5F3">6</Font>
+      </Text>
+    </PartText>
+    <PartText x="41" y="217" width="50" height="46">
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="35" color="#F4F5F3">9</Font>
+      </Text>
+    </PartText>
+    <PartText x="125" y="118" width="230" height="29">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="18" color="[CONFIGURATION.accent.0]">M E R I D I A N</Font>
+      </Text>
+    </PartText>
+    <PartText x="162" y="278" width="156" height="33">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="rajdhani" size="22" color="#78827D">
+          <Template>%s  %s<Parameter expression="[DAY_OF_WEEK_S]" />
+            <Parameter expression="[DAY_Z]" />
+          </Template>
+        </Font>
+      </Text>
+    </PartText>
+    <ComplicationSlot x="157" y="331" width="166" height="57" slotId="3" displayName="comp_bottom" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="166" height="57" cornerRadius="12" outlinePadding="2" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="166" height="24">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="19" width="166" height="38">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="166" height="24">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="19" width="166" height="38">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <AnalogClock x="0" y="0" width="480" height="480">
+      <HourHand resource="hour_hand" x="230" y="127" width="20" height="128" pivotX="0.5" pivotY="0.8828125" />
+      <MinuteHand resource="minute_hand" x="232" y="82" width="16" height="173" pivotX="0.5" pivotY="0.9132947976878613" />
+    </AnalogClock>
+    <BooleanConfiguration id="secondsOptIn">
+      <BooleanOption id="TRUE">
+        <AnalogClock x="0" y="0" width="480" height="480">
+          <SecondHand resource="second_hand" x="234" y="58" width="12" height="197" pivotX="0.5" pivotY="0.9238578680203046" tintColor="[CONFIGURATION.accent.0]">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+          </SecondHand>
+        </AnalogClock>
+      </BooleanOption>
+    </BooleanConfiguration>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Ellipse x="234" y="234" width="12" height="12">
+        <Fill color="[CONFIGURATION.accent.0]" />
+      </Ellipse>
+    </PartDraw>
+  </Scene>
+</WatchFace>

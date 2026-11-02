@@ -1,0 +1,38 @@
+name: Build and checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: android-actions/setup-android@v3
+      - name: Install SDK packages
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: JVM tests
+        run: python3 tools/test.py
+      - name: Publication and permission checks
+        run: python3 tools/check_publication.py
+      - name: Build and verify APKs
+        env:
+          ANDROID_PLATFORM: android-36
+        run: python3 tools/build.py all
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wristlab-development-apks
+          path: build/apks/
+          if-no-files-found: error
+          retention-days: 14

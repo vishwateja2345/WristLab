@@ -1,0 +1,897 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480">
+  <Metadata key="CLOCK_TYPE" value="ANALOG" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ListConfiguration id="dial" displayName="dial_label" screenReaderText="dial_label" defaultValue="graphite">
+      <ListOption id="marine" displayName="marine" />
+      <ListOption id="emerald" displayName="emerald" />
+      <ListOption id="graphite" displayName="graphite" />
+    </ListConfiguration>
+    <ColorConfiguration id="accent" displayName="accent_label" screenReaderText="accent_label" defaultValue="2">
+      <ColorOption id="0" displayName="ice" colors="#CBE1EC" />
+      <ColorOption id="1" displayName="gold" colors="#E3CC94" />
+      <ColorOption id="2" displayName="silver" colors="#EEF1F4" />
+      <ColorOption id="3" displayName="rose" colors="#E6B9A5" />
+    </ColorConfiguration>
+    <ColorConfiguration id="hands" displayName="hands_label" screenReaderText="hands_label" defaultValue="0">
+      <ColorOption id="0" displayName="silver" colors="#F4F6F7" />
+      <ColorOption id="1" displayName="gold" colors="#E3CC94" />
+      <ColorOption id="2" displayName="rose" colors="#E6B9A5" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="seconds" displayName="seconds_label" screenReaderText="seconds_label" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group name="dial_and_meters" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <ListConfiguration id="dial">
+        <ListOption id="marine">
+          <PartImage x="0" y="0" width="480" height="480">
+            <Image resource="dial_marine" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="emerald">
+          <PartImage x="0" y="0" width="480" height="480">
+            <Image resource="dial_emerald" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="graphite">
+          <PartImage x="0" y="0" width="480" height="480">
+            <Image resource="dial_graphite" />
+          </PartImage>
+        </ListOption>
+      </ListConfiguration>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_0">[STEP_PERCENT] &gt;= 3.3333333333333335</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_0">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="225" endAngle="231" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_1">[STEP_PERCENT] &gt;= 6.666666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_1">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="234" endAngle="240" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_2">[STEP_PERCENT] &gt;= 10.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_2">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="243" endAngle="249" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_3">[STEP_PERCENT] &gt;= 13.333333333333334</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_3">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="252" endAngle="258" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_4">[STEP_PERCENT] &gt;= 16.666666666666668</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_4">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="261" endAngle="267" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_5">[STEP_PERCENT] &gt;= 20.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_5">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="270" endAngle="276" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_6">[STEP_PERCENT] &gt;= 23.333333333333332</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_6">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="279" endAngle="285" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_7">[STEP_PERCENT] &gt;= 26.666666666666668</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_7">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="288" endAngle="294" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_8">[STEP_PERCENT] &gt;= 30.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_8">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="297" endAngle="303" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_9">[STEP_PERCENT] &gt;= 33.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_9">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="306" endAngle="312" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_10">[STEP_PERCENT] &gt;= 36.666666666666664</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_10">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="315" endAngle="321" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_11">[STEP_PERCENT] &gt;= 40.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_11">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="324" endAngle="330" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_12">[STEP_PERCENT] &gt;= 43.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_12">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="333" endAngle="339" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_13">[STEP_PERCENT] &gt;= 46.666666666666664</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_13">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="342" endAngle="348" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_14">[STEP_PERCENT] &gt;= 50.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_14">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="351" endAngle="357" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_15">[STEP_PERCENT] &gt;= 53.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_15">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="0" endAngle="6" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_16">[STEP_PERCENT] &gt;= 56.666666666666664</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_16">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="9" endAngle="15" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_17">[STEP_PERCENT] &gt;= 60.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_17">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="18" endAngle="24" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_18">[STEP_PERCENT] &gt;= 63.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_18">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="27" endAngle="33" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_19">[STEP_PERCENT] &gt;= 66.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_19">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="36" endAngle="42" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_20">[STEP_PERCENT] &gt;= 70.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_20">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="45" endAngle="51" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_21">[STEP_PERCENT] &gt;= 73.33333333333333</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_21">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="54" endAngle="60" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_22">[STEP_PERCENT] &gt;= 76.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_22">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="63" endAngle="69" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_23">[STEP_PERCENT] &gt;= 80.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_23">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="72" endAngle="78" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_24">[STEP_PERCENT] &gt;= 83.33333333333333</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_24">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="81" endAngle="87" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_25">[STEP_PERCENT] &gt;= 86.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_25">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="90" endAngle="96" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_26">[STEP_PERCENT] &gt;= 90.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_26">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="99" endAngle="105" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_27">[STEP_PERCENT] &gt;= 93.33333333333333</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_27">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="108" endAngle="114" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_28">[STEP_PERCENT] &gt;= 96.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_28">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="117" endAngle="123" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_step_percent_29">[STEP_PERCENT] &gt;= 100.0</Expression>
+        </Expressions>
+        <Compare expression="meter_step_percent_29">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="139" centerY="271" width="112" height="112" startAngle="126" endAngle="132" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_0">[BATTERY_PERCENT] &gt;= 3.3333333333333335</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_0">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="225" endAngle="231" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_1">[BATTERY_PERCENT] &gt;= 6.666666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_1">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="234" endAngle="240" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_2">[BATTERY_PERCENT] &gt;= 10.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_2">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="243" endAngle="249" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_3">[BATTERY_PERCENT] &gt;= 13.333333333333334</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_3">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="252" endAngle="258" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_4">[BATTERY_PERCENT] &gt;= 16.666666666666668</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_4">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="261" endAngle="267" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_5">[BATTERY_PERCENT] &gt;= 20.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_5">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="270" endAngle="276" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_6">[BATTERY_PERCENT] &gt;= 23.333333333333332</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_6">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="279" endAngle="285" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_7">[BATTERY_PERCENT] &gt;= 26.666666666666668</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_7">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="288" endAngle="294" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_8">[BATTERY_PERCENT] &gt;= 30.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_8">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="297" endAngle="303" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_9">[BATTERY_PERCENT] &gt;= 33.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_9">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="306" endAngle="312" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_10">[BATTERY_PERCENT] &gt;= 36.666666666666664</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_10">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="315" endAngle="321" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_11">[BATTERY_PERCENT] &gt;= 40.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_11">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="324" endAngle="330" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_12">[BATTERY_PERCENT] &gt;= 43.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_12">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="333" endAngle="339" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_13">[BATTERY_PERCENT] &gt;= 46.666666666666664</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_13">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="342" endAngle="348" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_14">[BATTERY_PERCENT] &gt;= 50.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_14">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="351" endAngle="357" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_15">[BATTERY_PERCENT] &gt;= 53.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_15">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="0" endAngle="6" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_16">[BATTERY_PERCENT] &gt;= 56.666666666666664</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_16">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="9" endAngle="15" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_17">[BATTERY_PERCENT] &gt;= 60.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_17">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="18" endAngle="24" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_18">[BATTERY_PERCENT] &gt;= 63.333333333333336</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_18">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="27" endAngle="33" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_19">[BATTERY_PERCENT] &gt;= 66.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_19">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="36" endAngle="42" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_20">[BATTERY_PERCENT] &gt;= 70.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_20">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="45" endAngle="51" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_21">[BATTERY_PERCENT] &gt;= 73.33333333333333</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_21">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="54" endAngle="60" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_22">[BATTERY_PERCENT] &gt;= 76.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_22">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="63" endAngle="69" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_23">[BATTERY_PERCENT] &gt;= 80.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_23">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="72" endAngle="78" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_24">[BATTERY_PERCENT] &gt;= 83.33333333333333</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_24">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="81" endAngle="87" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_25">[BATTERY_PERCENT] &gt;= 86.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_25">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="90" endAngle="96" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_26">[BATTERY_PERCENT] &gt;= 90.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_26">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="99" endAngle="105" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_27">[BATTERY_PERCENT] &gt;= 93.33333333333333</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_27">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="108" endAngle="114" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_28">[BATTERY_PERCENT] &gt;= 96.66666666666667</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_28">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="117" endAngle="123" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="meter_battery_percent_29">[BATTERY_PERCENT] &gt;= 100.0</Expression>
+        </Expressions>
+        <Compare expression="meter_battery_percent_29">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Arc centerX="341" centerY="271" width="112" height="112" startAngle="126" endAngle="132" direction="CLOCKWISE">
+              <Stroke color="[CONFIGURATION.accent.0]" thickness="2" cap="ROUND" />
+            </Arc>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartText x="191" y="356" width="98" height="32">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="rajdhani" size="20" color="#E6E8EA">
+            <Template>%s %s<Parameter expression="[DAY_OF_WEEK_S]" />
+              <Parameter expression="[DAY_Z]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+    </Group>
+    <ComplicationSlot x="88" y="247" width="102" height="55" slotId="1" displayName="left_slot" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingOval x="0" y="0" width="102" height="55" outlinePadding="4" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="102" height="34">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="27" color="#F0F3F5">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="34" width="102" height="19">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="10" color="#AEBBC4">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="102" height="34">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="27" color="#F0F3F5">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="34" width="102" height="19">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="10" color="#AEBBC4">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot x="290" y="247" width="102" height="55" slotId="2" displayName="right_slot" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingOval x="0" y="0" width="102" height="55" outlinePadding="4" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="102" height="34">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="27" color="#F0F3F5">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="34" width="102" height="19">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="10" color="#AEBBC4">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;POWER&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="102" height="34">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="27" color="#F0F3F5">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="34" width="102" height="19">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="10" color="#AEBBC4">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;POWER&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <AnalogClock x="0" y="0" width="480" height="480">
+      <HourHand resource="hour_hand" x="224" y="105" width="32" height="150" pivotX="0.5" pivotY="0.9" tintColor="[CONFIGURATION.hands.0]" />
+      <MinuteHand resource="minute_hand" x="228" y="48" width="24" height="210" pivotX="0.5" pivotY="0.9142857142857143" tintColor="[CONFIGURATION.hands.0]" />
+    </AnalogClock>
+    <BooleanConfiguration id="seconds">
+      <BooleanOption id="TRUE">
+        <AnalogClock x="0" y="0" width="480" height="480">
+          <SecondHand resource="second_hand" x="234" y="31" width="12" height="229" pivotX="0.5" pivotY="0.9126637554585153" tintColor="[CONFIGURATION.accent.0]">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+          </SecondHand>
+        </AnalogClock>
+      </BooleanOption>
+    </BooleanConfiguration>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Ellipse x="233" y="233" width="14" height="14">
+        <Fill color="#14202A" />
+        <Stroke color="[CONFIGURATION.hands.0]" thickness="2" />
+      </Ellipse>
+    </PartDraw>
+    <Group name="ambient_text" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartText x="105" y="320" width="270" height="32">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="rajdhani" size="22" color="#8C969D">
+            <Template>%s steps<Parameter expression="[STEP_COUNT]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+      <PartText x="105" y="355" width="270" height="26">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="rajdhani" size="17" color="#77828B">
+            <Template>%s %s / %s%%<Parameter expression="[DAY_OF_WEEK_S]" />
+              <Parameter expression="[DAY_Z]" />
+              <Parameter expression="[BATTERY_PERCENT]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+    </Group>
+  </Scene>
+</WatchFace>

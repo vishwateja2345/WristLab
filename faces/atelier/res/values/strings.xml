@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_name">Atelier Graphite</string>
+  <string name="dial_label">Dial material</string>
+  <string name="marine">Marine blue / gold</string>
+  <string name="emerald">Emerald / gold</string>
+  <string name="graphite">Graphite / silver</string>
+  <string name="accent_label">Gauge and seconds color</string>
+  <string name="hands_label">Hand finish</string>
+  <string name="seconds_label">Show seconds hand</string>
+  <string name="ice">Glacier blue</string>
+  <string name="gold">Champagne gold</string>
+  <string name="silver">Platinum silver</string>
+  <string name="rose">Rose gold</string>
+  <string name="left_slot">Left activity dial</string>
+  <string name="right_slot">Right power dial</string>
+</resources>

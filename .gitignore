@@ -1,0 +1,16 @@
+build/
+**/build/
+.venv/
+__pycache__/
+*.pyc
+*.apk
+*.idsig
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+.env
+.env.*
+local.properties
+.DS_Store

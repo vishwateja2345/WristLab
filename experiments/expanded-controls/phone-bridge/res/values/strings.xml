@@ -1,0 +1,1 @@
+<resources><string name="swipe_description">Performs navigation, media commands, and calibrated taps or swipes when you gesture with your selected paired watch. Observes only the active app package name; cannot retrieve screen content. Start a session in Gesture Lab Link. Stop from the app or its notification.</string></resources>

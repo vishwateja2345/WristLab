@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_name">Alpine / Dusk</string>
+  <string name="depth_label">Foreground depth</string>
+  <string name="layered">Clock behind foreground</string>
+  <string name="flat">Clock above image</string>
+  <string name="color_label">Clock color</string>
+  <string name="matched">Matched to artwork</string>
+  <string name="ivory">Warm ivory</string>
+  <string name="ink">Deep ink</string>
+  <string name="ice">Ice blue</string>
+  <string name="brightness_label">Scene brightness</string>
+  <string name="standard">Standard</string>
+  <string name="dim">Dim</string>
+  <string name="night">Night</string>
+  <string name="widget_label">Right data widget</string>
+</resources>

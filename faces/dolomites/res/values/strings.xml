@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="edge_label">Edge details</string>
+  <string name="edge_color_label">Edge color</string>
+  <string name="steps">Step progress ring</string>
+  <string name="split">Steps + battery arcs</string>
+  <string name="none">Clean edge</string>
+  <string name="mint">Soft mint</string>
+  <string name="app_name">Dolomites at dusk</string>
+  <string name="color_label">Clock color</string>
+  <string name="size_label">Clock size</string>
+  <string name="brightness_label">Photo brightness</string>
+  <string name="widget_label">Show bottom widget</string>
+  <string name="comp_bottom">Bottom widget</string>
+  <string name="matched">Matched to photo</string>
+  <string name="white">Soft white</string>
+  <string name="ivory">Warm ivory</string>
+  <string name="ink">Dark ink</string>
+  <string name="ice">Ice blue</string>
+  <string name="large">Large</string>
+  <string name="compact">Compact</string>
+  <string name="original">Original</string>
+  <string name="dim">Dim</string>
+  <string name="night">Night</string>
+</resources>

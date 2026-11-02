@@ -1,0 +1,72 @@
+[
+  {
+    "id": "meridian",
+    "title": "Meridian",
+    "path": "faces/meridian",
+    "status": "Installed; economy update installed",
+    "credit": "Original"
+  },
+  {
+    "id": "instrument",
+    "title": "Instrument Hybrid",
+    "path": "faces/instrument",
+    "status": "Installed; economy update installed",
+    "credit": "Original"
+  },
+  {
+    "id": "atelier",
+    "title": "Atelier Graphite",
+    "path": "faces/atelier",
+    "status": "Installed; interactive rendering checked",
+    "credit": "Original"
+  },
+  {
+    "id": "terminal",
+    "title": "Terminal",
+    "path": "faces/terminal",
+    "status": "Build checked; device acceptance not recorded",
+    "credit": "Original"
+  },
+  {
+    "id": "orbit",
+    "title": "Orbit",
+    "path": "faces/orbit",
+    "status": "Build checked; device acceptance not recorded",
+    "credit": "Original"
+  },
+  {
+    "id": "alpine",
+    "title": "Alpine / Dusk",
+    "path": "faces/alpine",
+    "status": "Preview; not installed",
+    "credit": "Marek Piwnicki / Unsplash"
+  },
+  {
+    "id": "dolomites",
+    "title": "Dolomites",
+    "path": "faces/dolomites",
+    "status": "Preview; not installed",
+    "credit": "Marek Piwnicki / Unsplash"
+  },
+  {
+    "id": "earth",
+    "title": "Blue Marble",
+    "path": "faces/earth",
+    "status": "Preview; not installed",
+    "credit": "NASA / Reto St\u00f6ckli"
+  },
+  {
+    "id": "milkyway",
+    "title": "Milky Way",
+    "path": "faces/milkyway",
+    "status": "Preview; not installed",
+    "credit": "Nathan Anderson / Unsplash"
+  },
+  {
+    "id": "tokyo",
+    "title": "Tokyo after dark",
+    "path": "faces/tokyo",
+    "status": "Preview; not installed",
+    "credit": "Siddhesh Mangela / Unsplash"
+  }
+]

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:32" />
+  <UserConfigurations>
+    <ColorConfiguration id="accent" displayName="color_label" screenReaderText="color_label" defaultValue="0">
+      <ColorOption id="0" displayName="lime" colors="#99FFAD" />
+      <ColorOption id="1" displayName="ice" colors="#91D9FF" />
+      <ColorOption id="2" displayName="orange" colors="#FFA36A" />
+      <ColorOption id="3" displayName="violet" colors="#C7ABFF" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="78" endX="415" endY="78">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="123" endX="415" endY="123">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="168" endX="415" endY="168">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="213" endX="415" endY="213">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="258" endX="415" endY="258">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="303" endX="415" endY="303">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="348" endX="415" endY="348">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="65" startY="393" endX="415" endY="393">
+        <Stroke color="#0E1811" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <PartText x="82" y="70" width="316" height="30">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="START" ellipsis="TRUE">
+        <Font family="jetbrainsmono" size="17" color="[CONFIGURATION.accent.0]">TEJA // TERMINAL</Font>
+      </Text>
+    </PartText>
+    <PartText x="82" y="116" width="316" height="32">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="START" ellipsis="TRUE">
+        <Font family="jetbrainsmono" size="20" color="#78827D">
+          <Template>%s  %s %s<Parameter expression="[DAY_OF_WEEK_S]" />
+            <Parameter expression="[DAY_Z]" />
+            <Parameter expression="[MONTH_S]" />
+          </Template>
+        </Font>
+      </Text>
+    </PartText>
+    <DigitalClock x="67" y="160" width="346" height="116">
+      <TimeText x="0" y="0" width="346" height="116" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER" alpha="255">
+        <Variant mode="AMBIENT" target="alpha" value="0" />
+        <Font family="rajdhani" size="100" color="[CONFIGURATION.accent.0]" />
+      </TimeText>
+      <TimeText x="0" y="0" width="346" height="116" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER" alpha="0">
+        <Variant mode="AMBIENT" target="alpha" value="255" />
+        <Font family="rajdhani" size="87.0" color="#C8CCCA" />
+      </TimeText>
+    </DigitalClock>
+    <PartText x="85" y="274" width="310" height="28">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="START" ellipsis="TRUE">
+        <Font family="jetbrainsmono" size="16" color="#78827D">&gt; watch.status</Font>
+      </Text>
+    </PartText>
+    <PartDraw x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Line startX="82" startY="315" endX="398" endY="315">
+        <Stroke color="#254632" thickness="1" cap="ROUND" />
+      </Line>
+    </PartDraw>
+    <ComplicationSlot x="81" y="332" width="147" height="70" slotId="1" displayName="comp_left" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="147" height="70" cornerRadius="12" outlinePadding="2" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="147" height="29">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="24" width="147" height="46">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="147" height="29">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;STEPS&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="24" width="147" height="46">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot x="252" y="332" width="147" height="70" slotId="2" displayName="comp_right" supportedTypes="SHORT_TEXT RANGED_VALUE EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="147" height="70" cornerRadius="12" outlinePadding="2" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="147" height="29">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="24" width="147" height="46">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartText x="0" y="0" width="147" height="29">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="16" color="#78827D">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="24" width="147" height="46">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="rajdhani" size="29" color="[CONFIGURATION.accent.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <PartText x="145" y="414" width="190" height="24">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Text align="CENTER" ellipsis="TRUE">
+        <Font family="jetbrainsmono" size="13" color="[CONFIGURATION.accent.0]">WRIST / LOCAL</Font>
+      </Text>
+    </PartText>
+  </Scene>
+</WatchFace>

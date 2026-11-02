@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="app_name">Teja / Meridian</string>
+  <string name="color_label">Accent color</string>
+  <string name="comp_left">Left complication</string>
+  <string name="comp_right">Right complication</string>
+  <string name="comp_bottom">Bottom complication</string>
+  <string name="lime">Electric lime</string>
+  <string name="ice">Glacier blue</string>
+  <string name="orange">Signal orange</string>
+  <string name="violet">Ultraviolet</string>
+<string name="seconds_label">Show seconds (more power)</string></resources>

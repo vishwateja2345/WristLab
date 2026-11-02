@@ -1,0 +1,20 @@
+WristLab
+Copyright 2026 WristLab contributors.
+
+Project code and original dial artwork are provided under Apache License 2.0.
+Fonts and third-party photography have separate terms: see LICENSES/ and
+docs/ASSETS.md. No trademark ownership or vendor endorsement is claimed.
+
+CompatDescriptor.java (retained legacy HID experiment) adapts WearMouse:
+https://github.com/ginkage/wearmouse
+Copyright 2018 Google LLC. Apache License 2.0.
+Its original copyright and license header is preserved in the source.
+Legacy HID classes are not compiled into the current watch APK.
+
+Related prior work: WearMouse and Drift / wristcursor:
+https://github.com/varaddorle007/wristcursor
+Wrist mice, pinch controls, and gesture scrolling are prior art.
+
+CleanYourTV inspired the community documentation and assistant-led setup approach:
+https://github.com/Gathin23/cleanyourtv
+No CleanYourTV code or branding is included. WristLab is an independent project.

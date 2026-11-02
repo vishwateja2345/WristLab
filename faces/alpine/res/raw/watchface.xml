@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:08:00" />
+  <UserConfigurations>
+    <ListConfiguration id="depth" displayName="depth_label" screenReaderText="depth_label" defaultValue="layered">
+      <ListOption id="layered" displayName="layered" />
+      <ListOption id="flat" displayName="flat" />
+    </ListConfiguration>
+    <ColorConfiguration id="clockColor" displayName="color_label" screenReaderText="color_label" defaultValue="0">
+      <ColorOption id="0" displayName="matched" colors="#352C40" />
+      <ColorOption id="1" displayName="ivory" colors="#FFF1D9" />
+      <ColorOption id="2" displayName="ink" colors="#352C40" />
+      <ColorOption id="3" displayName="ice" colors="#D1EDFF" />
+    </ColorConfiguration>
+    <ListConfiguration id="brightness" displayName="brightness_label" screenReaderText="brightness_label" defaultValue="standard">
+      <ListOption id="standard" displayName="standard" />
+      <ListOption id="dim" displayName="dim" />
+      <ListOption id="night" displayName="night" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group name="interactive_scene" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartImage x="0" y="0" width="480" height="480">
+        <Image resource="background" />
+      </PartImage>
+      <DigitalClock x="15" y="40" width="450" height="142">
+        <TimeText x="0" y="0" width="450" height="142" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+          <Font family="outfit" size="132" color="[CONFIGURATION.clockColor.0]" />
+        </TimeText>
+      </DigitalClock>
+      <ListConfiguration id="depth">
+        <ListOption id="layered">
+          <PartImage x="0" y="0" width="480" height="480">
+            <Image resource="foreground" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="flat">
+          <Group name="flat_no_foreground" x="0" y="0" width="480" height="480" />
+        </ListOption>
+      </ListConfiguration>
+      <ListConfiguration id="brightness">
+        <ListOption id="standard">
+          <PartImage x="0" y="0" width="480" height="480" alpha="0">
+            <Image resource="black" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="dim">
+          <PartImage x="0" y="0" width="480" height="480" alpha="45">
+            <Image resource="black" />
+          </PartImage>
+        </ListOption>
+        <ListOption id="night">
+          <PartImage x="0" y="0" width="480" height="480" alpha="90">
+            <Image resource="black" />
+          </PartImage>
+        </ListOption>
+      </ListConfiguration>
+      <PartText x="100" y="33" width="280" height="24">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="15" color="[CONFIGURATION.clockColor.0]">
+            <Template>%s  %s %s<Parameter expression="[DAY_OF_WEEK_S]" />
+              <Parameter expression="[DAY_Z]" />
+              <Parameter expression="[MONTH_S]" />
+            </Template>
+          </Font>
+        </Text>
+        <Launch target="CALENDAR" />
+      </PartText>
+      <PartText x="100" y="373" width="206" height="52">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="43" color="#FFF4E5">
+            <Template>%,d<Parameter expression="[STEP_COUNT]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+      <PartText x="92" y="422" width="225" height="22">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="11" color="#DAD9DE">
+            <Template>STEPS  /  %,d GOAL<Parameter expression="[STEP_GOAL]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="163" startY="451" endX="166" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_0">[STEP_PERCENT] &gt;= 4.16667</Expression>
+        </Expressions>
+        <Compare expression="step_0">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="163" startY="451" endX="166" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="170" startY="451" endX="173" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_1">[STEP_PERCENT] &gt;= 8.33333</Expression>
+        </Expressions>
+        <Compare expression="step_1">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="170" startY="451" endX="173" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="176" startY="451" endX="180" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_2">[STEP_PERCENT] &gt;= 12.50000</Expression>
+        </Expressions>
+        <Compare expression="step_2">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="176" startY="451" endX="180" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="182" startY="451" endX="186" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_3">[STEP_PERCENT] &gt;= 16.66667</Expression>
+        </Expressions>
+        <Compare expression="step_3">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="182" startY="451" endX="186" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="189" startY="451" endX="192" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_4">[STEP_PERCENT] &gt;= 20.83333</Expression>
+        </Expressions>
+        <Compare expression="step_4">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="189" startY="451" endX="192" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="196" startY="451" endX="199" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_5">[STEP_PERCENT] &gt;= 25.00000</Expression>
+        </Expressions>
+        <Compare expression="step_5">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="196" startY="451" endX="199" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="202" startY="451" endX="206" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_6">[STEP_PERCENT] &gt;= 29.16667</Expression>
+        </Expressions>
+        <Compare expression="step_6">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="202" startY="451" endX="206" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="208" startY="451" endX="212" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_7">[STEP_PERCENT] &gt;= 33.33333</Expression>
+        </Expressions>
+        <Compare expression="step_7">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="208" startY="451" endX="212" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="215" startY="451" endX="218" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_8">[STEP_PERCENT] &gt;= 37.50000</Expression>
+        </Expressions>
+        <Compare expression="step_8">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="215" startY="451" endX="218" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="222" startY="451" endX="225" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_9">[STEP_PERCENT] &gt;= 41.66667</Expression>
+        </Expressions>
+        <Compare expression="step_9">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="222" startY="451" endX="225" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="228" startY="451" endX="232" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_10">[STEP_PERCENT] &gt;= 45.83333</Expression>
+        </Expressions>
+        <Compare expression="step_10">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="228" startY="451" endX="232" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="234" startY="451" endX="238" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_11">[STEP_PERCENT] &gt;= 50.00000</Expression>
+        </Expressions>
+        <Compare expression="step_11">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="234" startY="451" endX="238" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="241" startY="451" endX="244" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_12">[STEP_PERCENT] &gt;= 54.16667</Expression>
+        </Expressions>
+        <Compare expression="step_12">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="241" startY="451" endX="244" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="248" startY="451" endX="251" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_13">[STEP_PERCENT] &gt;= 58.33333</Expression>
+        </Expressions>
+        <Compare expression="step_13">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="248" startY="451" endX="251" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="254" startY="451" endX="258" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_14">[STEP_PERCENT] &gt;= 62.50000</Expression>
+        </Expressions>
+        <Compare expression="step_14">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="254" startY="451" endX="258" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="260" startY="451" endX="264" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_15">[STEP_PERCENT] &gt;= 66.66667</Expression>
+        </Expressions>
+        <Compare expression="step_15">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="260" startY="451" endX="264" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="267" startY="451" endX="270" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_16">[STEP_PERCENT] &gt;= 70.83333</Expression>
+        </Expressions>
+        <Compare expression="step_16">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="267" startY="451" endX="270" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="274" startY="451" endX="277" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_17">[STEP_PERCENT] &gt;= 75.00000</Expression>
+        </Expressions>
+        <Compare expression="step_17">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="274" startY="451" endX="277" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="280" startY="451" endX="284" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_18">[STEP_PERCENT] &gt;= 79.16667</Expression>
+        </Expressions>
+        <Compare expression="step_18">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="280" startY="451" endX="284" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="286" startY="451" endX="290" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_19">[STEP_PERCENT] &gt;= 83.33333</Expression>
+        </Expressions>
+        <Compare expression="step_19">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="286" startY="451" endX="290" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="293" startY="451" endX="296" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_20">[STEP_PERCENT] &gt;= 87.50000</Expression>
+        </Expressions>
+        <Compare expression="step_20">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="293" startY="451" endX="296" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="300" startY="451" endX="303" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_21">[STEP_PERCENT] &gt;= 91.66667</Expression>
+        </Expressions>
+        <Compare expression="step_21">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="300" startY="451" endX="303" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="306" startY="451" endX="310" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_22">[STEP_PERCENT] &gt;= 95.83333</Expression>
+        </Expressions>
+        <Compare expression="step_22">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="306" startY="451" endX="310" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Line startX="312" startY="451" endX="316" endY="451">
+          <Stroke color="#60777D87" thickness="2" cap="ROUND" />
+        </Line>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="step_23">[STEP_PERCENT] &gt;= 100.00000</Expression>
+        </Expressions>
+        <Compare expression="step_23">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Line startX="312" startY="451" endX="316" endY="451">
+              <Stroke color="#FFF1D9" thickness="2" cap="ROUND" />
+            </Line>
+          </PartDraw>
+        </Compare>
+      </Condition>
+    </Group>
+    <ComplicationSlot x="312" y="378" width="80" height="57" slotId="1" displayName="widget_label" supportedTypes="SHORT_TEXT EMPTY">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="SHORT_TEXT" />
+      <BoundingRoundBox x="0" y="0" width="80" height="57" cornerRadius="12" outlinePadding="4" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="80" height="31">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="outfit" size="20" color="#FFF4E5">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+        <PartText x="0" y="31" width="80" height="19">
+          <Text align="CENTER" ellipsis="TRUE">
+            <Font family="outfit" size="9" color="#DAD9DE">
+              <Template>%s<Parameter expression="[COMPLICATION.TITLE] != null ? [COMPLICATION.TITLE] : &quot;BATTERY&quot;" />
+              </Template>
+            </Font>
+          </Text>
+        </PartText>
+      </Complication>
+    </ComplicationSlot>
+    <Group name="quiet_ambient" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <DigitalClock x="15" y="181" width="450" height="82">
+        <TimeText x="0" y="0" width="450" height="82" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+          <Font family="outfit" size="64" color="#B7BBC3" />
+        </TimeText>
+      </DigitalClock>
+      <PartText x="110" y="278" width="260" height="28">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="20" color="#8D939D">
+            <Template>%,d steps<Parameter expression="[STEP_COUNT]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+      <PartText x="110" y="316" width="260" height="23">
+        <Text align="CENTER" ellipsis="TRUE">
+          <Font family="outfit" size="14" color="#747A85">
+            <Template>%s  %s %s<Parameter expression="[DAY_OF_WEEK_S]" />
+              <Parameter expression="[DAY_Z]" />
+              <Parameter expression="[MONTH_S]" />
+            </Template>
+          </Font>
+        </Text>
+      </PartText>
+    </Group>
+  </Scene>
+</WatchFace>

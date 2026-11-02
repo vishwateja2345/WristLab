@@ -1,6 +1,8 @@
 # Assistant setup prompt
 
-Use this repository to help me set up WristLab. My watch model/software: ____. My phone model/software: ____. I want: controller / selected faces / source development.
+Use this repository to help me work with WristLab. My watch model/software: ____. My phone model/software: ____. I want: a new independent project / controller / selected faces / source development. My idea or use case: ____.
+
+For a new idea, read docs/PLATFORM.md, projects/README.md and docs/PROJECTS.md. Use tools/new_project.py to create an independent module with its own setup, lifecycle, permission declarations and evidence. Do not assume it needs Gesture Lab, the existing Bluetooth protocol, or installation of our example apps. Discover projects with tools/catalog.py and validate before building. Keep speculative ideas separate from implemented behavior.
 
 Read README.md, docs/SETUP.md, docs/COMPATIBILITY.md, docs/BUILD.md and docs/BATTERY.md first. Use this repo's build tools rather than improvising a new controller. Inspect actual connected devices with explicit selectors. Never assume the first ADB device is the watch.
 

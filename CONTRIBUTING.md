@@ -35,3 +35,5 @@ Only contribute work you can redistribute. Retain OFL/font and image notices. Pa
 ## Pull requests
 
 State the user-visible change, validation performed, limitations and any new permission. Label mockups as mockups. Do not describe a build-only check as a device test. Contributions are licensed under Apache 2.0 for code/original artwork, subject to documented third-party asset terms; no CLA is required.
+
+Maintainers can follow [the release checklist](docs/RELEASING.md) for versioned snapshots and development APKs.

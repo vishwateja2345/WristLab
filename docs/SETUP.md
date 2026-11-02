@@ -2,7 +2,7 @@
 
 ## Install
 
-Download the watch and phone APKs from [Releases](https://github.com/vishwateja2345/WristLab/releases/latest), or build them from source. Watch package: `studio.teja.gesturelab`. Phone package: `studio.teja.airbridge`. The launcher labels remain Gesture Lab and Gesture Lab Link.
+Download the watch and phone APKs from [Releases](https://github.com/vishwateja2345/WristLab/releases), or build them from source. Watch package: `studio.teja.gesturelab`. Phone package: `studio.teja.airbridge`. The launcher labels remain Gesture Lab and Gesture Lab Link.
 
 Install the phone APK using Android's package installer. Android may require you to allow installation from your chosen file manager. Accessibility permission is separate from installation.
 

@@ -20,7 +20,7 @@ The current controller was tested on one Galaxy Watch7 and OnePlus 15R pair. Wri
 |---|---|
 | Create something new | [Community project steps](projects/README.md), [platform guide](docs/PLATFORM.md), [starter generator](tools/new_project.py) |
 | Explore the project catalog | `python3 tools/catalog.py list` · [metadata contract](docs/PROJECTS.md) |
-| Install the controller | [Release APKs](https://github.com/vishwateja2345/WristLab/releases/latest) → [setup](docs/SETUP.md) |
+| Install the controller | [Release APKs](https://github.com/vishwateja2345/WristLab/releases) → [setup](docs/SETUP.md) |
 | Pick or edit a watch face | [Face gallery](faces/README.md) |
 | Build everything yourself | [Build guide](docs/BUILD.md) |
 | Let a coding assistant help | Clone this repo and use [PROMPT.md](PROMPT.md) |
